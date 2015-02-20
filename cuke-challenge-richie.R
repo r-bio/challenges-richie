@@ -28,9 +28,13 @@ length(no_missing)
 
 ### Question 2: How many institutions house specimens; draw a bar plot ################
 
-unique(hol$dwc.institutionCode)
+Institutions <- unique(hol$dwc.institutionCode)
 
 ### 4 institutions house specimens ###################################################
 
-which(hol$dwc.institutionCode == "FLMNH")
+FLcounts <- length(hol$dwc.institutionCode)[which(hol$dwc.institutionCode == "FLMNH")]
+CAcounts <- length(hol$dwc.institutionCode)[which(hol$dwc.institutionCode == "CAS")]
+MCcounts <- length(hol$dwc.institutionCode)[which(hol$dwc.institutionCode == "MCZ")]
+YPcounts <- length(hol$dwc.institutionCode)[which(hol$dwc.institutionCode == "YPM")]
+
 
